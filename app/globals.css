@@ -43,18 +43,18 @@ main { flex: 1; }
 .beranda-sub { font-size: 25px; margin-top: 6px; }
 
 /* ---------- Tentang Kami ---------- */
-.konten { max-width: 1000px; margin: 0 auto; padding: 60px 24px; }
-.judul-seksi { font-family: var(--font-fell); font-size: 30px; font-weight: 400; text-align: center; margin-bottom: 40px; }
-.seksi + .seksi { margin-top: 90px; }
-.profil { display: flex; align-items: center; justify-content: center; gap: 58px; }
-.profil-foto { position: relative; width: 200px; height: 200px; flex-shrink: 0; background: #d9d9d9; }
-.profil-foto img { object-fit: cover; }
-.teks-25 { font-size: 25px; line-height: 1.64; }
-.sejarah { max-width: 520px; margin: 0 auto; }
-.sejarah p + p { margin-top: 12px; }
-.arsip-grid { display: grid; grid-template-columns: repeat(4, 200px); justify-content: center; gap: 38px; }
-.arsip-item { position: relative; aspect-ratio: 1; background: #d9d9d9; }
-.arsip-item img { object-fit: cover; }
+.tentang { background: var(--hijau); min-height: calc(100vh - var(--header-h) - var(--footer-h)); padding: 56px 24px 72px; }
+.tentang-isi { max-width: 860px; margin: 0 auto; font-size: 20px; line-height: 1.6; }
+.tentang-isi > * + * { margin-top: 24px; }
+.tentang-isi p { text-align: justify; }
+.tentang-awal { display: flow-root; }
+.tentang-foto { position: relative; float: left; width: 280px; aspect-ratio: 1; margin: 4px 28px 12px 0; background: #d9d9d9; }
+.tentang-foto img { object-fit: cover; }
+.tentang-isi > .tentang-artikel-judul { margin-top: 56px; text-align: left; }
+.tentang-artikel { padding-left: 1.6em; }
+.tentang-artikel li { margin-top: 6px; line-height: 1.5; }
+.tentang-artikel a { text-decoration: underline; }
+
 
 /* ---------- Katalog ---------- */
 .katalog { padding: 64px 46px; }
