@@ -106,4 +106,7 @@ main { flex: 1; }
   .detail-nama { font-size: 32px; }
   .detail-cerita { margin-top: 24px; font-size: 17px; }
   .detail-harga { padding-top: 28px; font-size: 26px; }
+  .tentang { padding: 32px 18px 48px; }
+  .tentang-isi { font-size: 17px; }
+  .tentang-foto { float: none; width: 220px; margin: 0 auto 20px; }
 }
