@@ -2,47 +2,55 @@ import Image from "next/image";
 
 export const metadata = { title: "Tentang Kami | Wayang Uwuh" };
 
-// Isi biodata, sejarah, dan foto arsip di sini.
-const BIODATA = [
-  "Nama: Pak Iskandar",
-  "Asal: Demangan, Yogyakarta",
-  "Berkarya sejak: (isi tahun)",
-  "Keahlian: Wayang Uwuh & lukis",
+// Ganti dengan foto asli: taruh file di folder public/ lalu ubah nama filenya di sini (mis. "/iskandar.jpg").
+const FOTO = "/iskandar.svg";
+
+const PARAGRAF_1 =
+  "Wayang Uwuh bermula pada 2013 di tepian Sungai Ciliwung, saat Bapak Iskandar Harjodimulyo menjadi relawan seni penyadaran. Setelah banjir besar surut, sampah berserakan memberi beliau gagasan untuk mengolahnya menjadi karya seni. Sampah sebagai persoalan lingkungan beliau padukan dengan wayang sebagai seni budaya, menjawab keterbatasan anggaran mengikuti pameran internasional.";
+const PARAGRAF_2 =
+  "Wayang pertama beliau berbahan botol plastik bekas. Setelah beberapa kali gagal karena plastik meleleh saat dipanaskan, beliau menemukan cara menyetrika botol di antara lapisan kain dan koran hingga menjadi lembaran. Bahan pun berkembang, mulai dari triplek, seng, dan kardus hingga berbagai jenis plastik bekas.";
+const PARAGRAF_3 =
+  "Dalam acara Pasar Seni di Bandung, beliau secara spontan mengarak wayang-wayang tersebut berkeliling lokasi dengan iringan musik sederhana dan berhasil menarik banyak penonton. Seorang kenalan yang menyaksikannya kemudian menyebutnya “Wayang Uwuh”, yang lalu beliau pakai sebagai nama dan identitas bagi seluruh karyanya hingga kini.";
+
+// Isi "url" dengan alamat artikelnya kalau mau judulnya bisa diklik.
+const ARTIKEL = [
+  { judul: "Kisah Iskandar Pencipta Wayang Uwuh, dari Banjir Ciliwung hingga Banjir Pesanan", sumber: "Kompas", url: "" },
+  { judul: "Profil Iskandar Harjodimulyo Sang Maestro Wayang Uwuh, Olah Limbah Jadi Karya", sumber: "Tempo", url: "" },
+  { judul: "Wayang Uwuh Karya Iskandar Menjelajah Hingga Luar Negeri", sumber: "Times Indonesia", url: "" },
+  { judul: "Kisah Iskandar Sulap Sampah Jadi Wayang Uwuh, Eksis hingga Museum Belanda", sumber: "Detikjogja", url: "" },
+  { judul: "Wayang Uwuh, dari Sampah Menjadi Karya Seni", sumber: "Perpusnas", url: "" },
 ];
-const SEJARAH = [
-  "(Isi sejarah Wayang Uwuh: awal mula Pak Iskandar membuat wayang dari barang bekas.)",
-  "(Paragraf kedua sejarah.)",
-];
-const ARSIP = ["/arsip/1.svg", "/arsip/2.svg", "/arsip/3.svg", "/arsip/4.svg"];
 
 export default function TentangKami() {
   return (
-    <div className="konten">
-      <section className="seksi" id="profil">
-        <h2 className="judul-seksi">Profil Seniman</h2>
-        <div className="profil">
-          <div className="profil-foto">
-            <Image src="/iskandar.svg" alt="Foto Pak Iskandar" fill sizes="200px" />
+    <div className="tentang">
+      <article className="tentang-isi">
+        <h1 className="judul-seksi">Kelahiran Wayang Uwuh</h1>
+
+        <div className="tentang-awal">
+          <div className="tentang-foto">
+            <Image src={FOTO} alt="Foto Pak Iskandar Harjodimulyo" fill sizes="(max-width: 860px) 220px, 280px" />
           </div>
-          <div>{BIODATA.map((b) => <p key={b} className="teks-25">{b}</p>)}</div>
+          <p>{PARAGRAF_1}</p>
         </div>
-      </section>
 
-      <section className="seksi" id="sejarah">
-        <h2 className="judul-seksi">Sejarah Wayang Uwuh</h2>
-        <div className="sejarah">{SEJARAH.map((s, i) => <p key={i} className="teks-25">{s}</p>)}</div>
-      </section>
+        <p>{PARAGRAF_2}</p>
+        <p>{PARAGRAF_3}</p>
 
-      <section className="seksi" id="arsip">
-        <h2 className="judul-seksi">Arsip Kegiatan</h2>
-        <div className="arsip-grid">
-          {ARSIP.map((src, i) => (
-            <div key={i} className="arsip-item">
-              <Image src={src} alt={`Dokumentasi kegiatan ${i + 1}`} fill sizes="(max-width: 860px) 50vw, 200px" />
-            </div>
+        <p className="tentang-artikel-judul">Artikel yang memuat mengenai Wayang Uwuh oleh Iskandar Harjodimulyo:</p>
+        <ol className="tentang-artikel">
+          {ARTIKEL.map((a) => (
+            <li key={a.judul}>
+              {a.url ? (
+                <a href={a.url} target="_blank" rel="noopener noreferrer">{a.judul}</a>
+              ) : (
+                a.judul
+              )}{" "}
+              (Sumber: {a.sumber})
+            </li>
           ))}
-        </div>
-      </section>
+        </ol>
+      </article>
     </div>
   );
 }
