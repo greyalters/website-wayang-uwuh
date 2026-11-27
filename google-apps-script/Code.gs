@@ -4,14 +4,14 @@
  * Lalu Triggers (ikon jam) > Add Trigger > fungsi onFormSubmit, event "From form", "On form submit".
  *
  * Judul pertanyaan di Form HARUS sama dengan nilai di FIELD di bawah.
- * Pilihan "Jenis/Kategori" : Wayang, Lukis Kaca, Lukis Besek, Lukis Kanvas.
+ * "Jenis/Golongan Penokohan Wayang" berupa jawaban singkat (isian bebas), mis. Pandawa, Punakawan, Kurawa, dst.
  */
 const WEBSITE_URL = 'https://NAMA-PROJECT.vercel.app/api/produk'; // ganti dengan domain Vercel
 const SECRET_TOKEN = 'ganti-dengan-token-acak-panjang';             // sama dengan FORM_SECRET_TOKEN di Vercel
 
 const FIELD = {
   nama: 'Nama Wayang',
-  kategori: 'Jenis/Kategori Wayang',
+  golongan: 'Jenis/Golongan Penokohan Wayang',
   cerita: 'Cerita/Detail Wayang',
   harga: 'Harga Jual',
   foto: 'Foto Wayang',
