@@ -63,21 +63,14 @@ main { flex: 1; }
 
 /* ---------- Katalog ---------- */
 .katalog { padding: 64px 46px; }
-.submenu {
-  background: var(--biru); max-width: 920px; margin: 0 auto 64px; padding: 14px 30px;
-  display: flex; gap: 40px; justify-content: center;
-}
-.submenu a {
-  flex: 1; max-width: 194px; background: var(--hijau); color: var(--putih);
-  font-weight: 700; font-size: 25px; text-align: center; padding: 2px 8px; white-space: nowrap;
-}
-.submenu a.aktif { background: var(--oranye); }
 .katalog-grid { display: grid; grid-template-columns: repeat(5, 1fr); gap: 40px; max-width: 1060px; margin: 0 auto; }
 .kartu { display: block; }
 .kartu-foto { position: relative; aspect-ratio: 1; background: #d9d9d9; overflow: hidden; }
 .kartu-foto img { object-fit: cover; transition: transform .3s; }
 .kartu:hover .kartu-foto img { transform: scale(1.04); }
 .kartu-nama { font-size: 18px; font-weight: 700; margin-top: 8px; text-align: center; }
+.kartu-golongan { font-size: 15px; text-align: center; opacity: .8; margin-top: 2px; }
+.kartu-harga { font-size: 16px; font-weight: 700; text-align: center; margin-top: 2px; }
 .kosong { text-align: center; font-size: 20px; }
 
 /* ---------- Detail Katalog ---------- */
@@ -110,8 +103,6 @@ main { flex: 1; }
   .teks-25 { font-size: 18px; }
   .judul-seksi { font-size: 26px; }
   .katalog { padding: 32px 16px; }
-  .submenu { flex-wrap: wrap; gap: 10px; padding: 12px; margin-bottom: 32px; }
-  .submenu a { font-size: 17px; flex: 1 1 40%; max-width: none; }
   .katalog-grid { grid-template-columns: repeat(2, 1fr); gap: 16px; }
   .arsip-grid { grid-template-columns: repeat(2, 1fr); gap: 16px; }
   .detail { flex-direction: column; padding: 32px 16px 48px; gap: 28px; }
