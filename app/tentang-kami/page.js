@@ -3,7 +3,7 @@ import Image from "next/image";
 export const metadata = { title: "Tentang Kami | Wayang Uwuh" };
 
 // Ganti dengan foto asli: taruh file di folder public/ lalu ubah nama filenya di sini (mis. "/iskandar.jpg").
-const FOTO = "/iskandar.svg";
+const FOTO = "/iskandar.png";
 
 const PARAGRAF_1 =
   "Wayang Uwuh bermula pada 2013 di tepian Sungai Ciliwung, saat Bapak Iskandar Harjodimulyo menjadi relawan seni penyadaran. Setelah banjir besar surut, sampah berserakan memberi beliau gagasan untuk mengolahnya menjadi karya seni. Sampah sebagai persoalan lingkungan beliau padukan dengan wayang sebagai seni budaya, menjawab keterbatasan anggaran mengikuti pameran internasional.";
