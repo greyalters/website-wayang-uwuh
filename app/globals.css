@@ -42,7 +42,7 @@ main { flex: 1; }
 .slide { position: absolute; inset: 0; opacity: 0; transition: opacity 1.5s ease-in-out; }
 .slide.aktif { opacity: 1; }
 .slide img { object-fit: cover; }
-.beranda-overlay { position: absolute; inset: 0; background: rgba(233, 227, 179, .55); }
+.beranda-overlay { position: absolute; inset: 0; }
 .beranda-teks { position: relative; text-align: center; padding: 0 16px; }
 .beranda-judul { font-family: var(--font-cinzel); font-size: 50px; font-weight: 400; }
 .beranda-sub { font-size: 25px; margin-top: 6px; }
