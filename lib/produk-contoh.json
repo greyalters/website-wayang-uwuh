@@ -1,7 +1,26 @@
 [
-  { "slug": "contoh-wayang-1", "nama": "Contoh Wayang 1", "kategori": "wayang", "cerita": "Contoh cerita/detail wayang. Data ini otomatis diganti oleh produk dari Google Form setelah database terhubung.", "harga": "350000", "foto": "/produk/placeholder.svg" },
-  { "slug": "contoh-wayang-2", "nama": "Contoh Wayang 2", "kategori": "wayang", "cerita": "Contoh cerita/detail wayang.", "harga": "", "foto": "/produk/placeholder.svg" },
-  { "slug": "contoh-lukis-kaca", "nama": "Contoh Lukis Kaca", "kategori": "lukis-kaca", "cerita": "Contoh cerita/detail produk.", "harga": "500000", "foto": "/produk/placeholder.svg" },
-  { "slug": "contoh-lukis-besek", "nama": "Contoh Lukis Besek", "kategori": "lukis-besek", "cerita": "Contoh cerita/detail produk.", "harga": "150000", "foto": "/produk/placeholder.svg" },
-  { "slug": "contoh-lukis-kanvas", "nama": "Contoh Lukis Kanvas", "kategori": "lukis-kanvas", "cerita": "Contoh cerita/detail produk.", "harga": "", "foto": "/produk/placeholder.svg" }
+  {
+    "slug": "contoh-wayang-1",
+    "nama": "Contoh Wayang 1",
+    "golongan": "Pandawa",
+    "cerita": "Contoh cerita/detail wayang. Data ini otomatis diganti oleh produk dari Google Form setelah database terhubung.",
+    "harga": "350000",
+    "foto": "/produk/placeholder.svg"
+  },
+  {
+    "slug": "contoh-wayang-2",
+    "nama": "Contoh Wayang 2",
+    "golongan": "Punakawan",
+    "cerita": "Contoh cerita/detail wayang.",
+    "harga": "250000",
+    "foto": "/produk/placeholder.svg"
+  },
+  {
+    "slug": "contoh-wayang-3",
+    "nama": "Contoh Wayang 3",
+    "golongan": "Kurawa",
+    "cerita": "Contoh cerita/detail wayang.",
+    "harga": "300000",
+    "foto": "/produk/placeholder.svg"
+  }
 ]
