@@ -2,7 +2,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import { produkBySlug, semuaProduk } from "@/lib/produk";
-import { kategoriLabel, formatHarga } from "@/lib/site";
+import { formatHarga } from "@/lib/site";
 
 export const revalidate = 3600;
 export const dynamicParams = true;
@@ -27,10 +27,10 @@ export default async function DetailKatalog({ params }) {
       </div>
       <div className="detail-info">
         <h1 className="detail-nama">{p.nama}</h1>
-        <p className="detail-jenis">{kategoriLabel(p.kategori)}</p>
+        {p.golongan && <p className="detail-jenis">{p.golongan}</p>}
         {p.cerita && <p className="detail-cerita">{p.cerita}</p>}
         {harga && <p className="detail-harga">{harga}</p>}
-        <Link href={`/katalog?jenis=${p.kategori}`} className="kembali">Kembali ke Katalog</Link>
+        <Link href="/katalog" className="kembali">Kembali ke Katalog</Link>
       </div>
     </div>
   );
