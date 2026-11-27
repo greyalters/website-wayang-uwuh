@@ -25,7 +25,6 @@ export default function TentangKami() {
   return (
     <div className="tentang">
       <article className="tentang-isi">
-        <h1 className="judul-seksi">Kelahiran Wayang Uwuh</h1>
 
         <div className="tentang-awal">
           <div className="tentang-foto">
