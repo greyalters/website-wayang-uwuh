@@ -20,7 +20,7 @@ export default async function Katalog() {
             return (
               <Link key={p.slug} href={`/katalog/${p.slug}`} className="kartu">
                 <div className="kartu-foto">
-                  <Image src={p.foto} alt={p.nama} fill sizes="(max-width: 860px) 50vw, 180px" />
+                  <Image src={p.foto} alt={p.nama} fill sizes="(max-width: 860px) 50vw, 260px" />
                 </div>
                 <p className="kartu-nama">{p.nama}</p>
                 {p.golongan && <p className="kartu-golongan">{p.golongan}</p>}
