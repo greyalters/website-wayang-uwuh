@@ -55,17 +55,17 @@ main { flex: 1; }
 .tentang-artikel li { margin-top: 6px; line-height: 1.5; }
 .tentang-artikel a { text-decoration: underline; }
 
-
 /* ---------- Katalog ---------- */
 .katalog { padding: 64px 46px; }
-.katalog-grid { display: grid; grid-template-columns: repeat(5, 1fr); gap: 40px; max-width: 1060px; margin: 0 auto; }
-.kartu { display: block; }
-.kartu-foto { position: relative; aspect-ratio: 1; background: #d9d9d9; overflow: hidden; }
-.kartu-foto img { object-fit: cover; transition: transform .3s; }
-.kartu:hover .kartu-foto img { transform: scale(1.04); }
-.kartu-nama { font-size: 18px; font-weight: 700; margin-top: 8px; text-align: center; }
-.kartu-golongan { font-size: 15px; text-align: center; opacity: .8; margin-top: 2px; }
-.kartu-harga { font-size: 16px; font-weight: 700; text-align: center; margin-top: 2px; }
+.katalog-list { max-width: 1100px; margin: 0 auto; display: flex; flex-direction: column; gap: 36px; }
+.wayang { background: var(--hijau); border-radius: 28px; padding: 18px; display: flex; gap: 32px; align-items: flex-start; }
+.wayang-foto { position: relative; width: 450px; height: 600px; flex-shrink: 0; border-radius: 22px; overflow: hidden; background: #d9d9d9; }
+.wayang-foto img { object-fit: contain; object-position: center; }
+.wayang-info { flex: 1; padding: 6px 10px 6px 0; }
+.wayang-nama { font-family: var(--font-cinzel); font-size: 30px; font-weight: 400; line-height: 1.15; text-transform: uppercase; }
+.wayang-golongan { font-size: 22px; font-weight: 700; margin-top: 2px; }
+.wayang-cerita { font-size: 18px; line-height: 1.6; margin-top: 14px; text-align: justify; white-space: pre-line; }
+.wayang-harga { font-size: 22px; font-weight: 700; margin-top: 16px; }
 .kosong { text-align: center; font-size: 20px; }
 
 /* ---------- Detail Katalog ---------- */
@@ -81,8 +81,7 @@ main { flex: 1; }
 
 /* ---------- Responsif ---------- */
 @media (max-width: 1100px) {
-  .katalog-grid { grid-template-columns: repeat(3, 1fr); }
-  .arsip-grid { grid-template-columns: repeat(2, 200px); }
+  .wayang-foto { width: 360px; height: 480px; }
 }
 @media (max-width: 860px) {
   :root { --header-h: auto; }
@@ -95,12 +94,13 @@ main { flex: 1; }
   .beranda { min-height: 75vh; }
   .beranda-judul { font-size: 36px; }
   .beranda-sub { font-size: 18px; }
-  .profil { flex-direction: column; gap: 24px; text-align: center; }
-  .teks-25 { font-size: 18px; }
-  .judul-seksi { font-size: 26px; }
   .katalog { padding: 32px 16px; }
-  .katalog-grid { grid-template-columns: repeat(2, 1fr); gap: 16px; }
-  .arsip-grid { grid-template-columns: repeat(2, 1fr); gap: 16px; }
+  .wayang { flex-direction: column; gap: 18px; border-radius: 22px; }
+  .wayang-foto { width: 100%; height: auto; aspect-ratio: 3 / 4; }
+  .wayang-info { padding: 0 6px 6px; }
+  .wayang-nama { font-size: 24px; }
+  .wayang-golongan { font-size: 18px; }
+  .wayang-cerita { font-size: 16px; }
   .detail { flex-direction: column; padding: 32px 16px 48px; gap: 28px; }
   .detail-foto { width: 100%; }
   .detail-nama { font-size: 32px; }
